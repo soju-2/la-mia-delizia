@@ -1,11 +1,13 @@
 .navbar {
 /*   border: 2px dashed green */
+  padding:10px 0;
 }
 
 .navbar__list {
   display: flex;
   justify-content: center;
   list-style: none;
+  height:300px;
 }
 
 .navbar__list-item {
@@ -29,9 +31,9 @@
   font-size: 60px;
 }
 
-.navbar__list-item menu:hover {
+.navbar__list-item .menu:hover {
   background-color: transparent;
-  width: 600px;
+/*   width: 600px; */
   transition: width 0.5s;
   border: 3px solid #d40000;
   
@@ -43,24 +45,23 @@
 }
 
 /* Logo link */
-.logo {
-    width: 30%;
+.logo:hover {
+  width: 40%;
+  transition: width 1s;
+  transition: height 1s;
 }
 
 .logo a {
   background-color: transparent;
-  padding: 0;
+  padding: 1;
 /*   border: 3px solid #fff; */
 /*   border-radius: 5px; */
-  width: 500px;
+  width: 100%;
 
 }
 
 .logo a:hover {
   background-color: transparent;
-  width: 600px;
-  transition: width 0.5s;
-  transition: height 0.5;
   border: 3px solid #d40000;
 /*   padding:5px; */
 }
@@ -76,6 +77,21 @@
   background-image: url(https://assets.codepen.io/4722029/pastelitos.jpg?format=auto);
 }
 
-.navbar__list-item order a:hover {
-  
+.navbar__list-item.order a:hover {
+  image: max-width 100
+}
+
+
+.image-wrapper {
+  margin: 0 auto;
+  width: 500px;
+  overflow: hidden;
+  font-size: 0;
+}
+img {
+  max-width: 100%;
+  transition: transform 0.3s;
+}
+.image-wrapper:hover img {
+  transform: scale(1.2);
 }
