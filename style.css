@@ -1,9 +1,11 @@
 .navbar {
-/*   border: 2px dashed green */
+/*   border: 2px dashed green; */
   padding:10px 0;
+  background-color: #ffd666;
 }
 
 .navbar__list {
+/*    border: 2px dashed green; */
   display: flex;
   justify-content: center;
   list-style: none;
@@ -11,6 +13,7 @@
 }
 
 .navbar__list-item {
+/*    border: 2px dashed green; */
   width: 30%;
   max-width: 600px;
   display: flex;
@@ -31,17 +34,33 @@
   font-size: 60px;
 }
 
-.navbar__list-item .menu:hover {
-  background-color: transparent;
-/*   width: 600px; */
-  transition: width 0.5s;
-  border: 3px solid #d40000;
-  
-}
-
 /* Food Menu link */
 .menu {
-  background-image: url(https://assets.codepen.io/4722029/mazamorra-morada.jpg?format=auto);  
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.menu img {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  transition: transform 0.3s;
+}
+.menu span {
+  display: block;
+  color: white;
+  position: relative;
+  z-index:100;
+}
+
+.menu:hover img {
+  transform: scale(1.2);
 }
 
 /* Logo link */
@@ -54,8 +73,6 @@
 .logo a {
   background-color: transparent;
   padding: 1;
-/*   border: 3px solid #fff; */
-/*   border-radius: 5px; */
   width: 100%;
 
 }
@@ -72,26 +89,38 @@
   background-position: center
 }
 
-/* Order link */
-.order {
-  background-image: url(https://assets.codepen.io/4722029/pastelitos.jpg?format=auto);
-}
-
 .navbar__list-item.order a:hover {
   image: max-width 100
 }
 
-
-.image-wrapper {
+/* Order link */
+.order {
   margin: 0 auto;
-  width: 500px;
+  width: 600px;
   overflow: hidden;
   font-size: 0;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
-img {
+
+.order:hover img {
+  transform: scale(1.2);
+}
+
+.order img {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   max-width: 100%;
   transition: transform 0.3s;
 }
-.image-wrapper:hover img {
-  transform: scale(1.2);
+.order span {
+  display: block;
+  color: white;
+  position: relative;
+  z-index:100;
 }
